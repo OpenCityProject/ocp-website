@@ -5,6 +5,8 @@ This probably deserves to go inside the [ocp-docker](https://github.com/OpenCity
 
 This is the website for the Open City Project, in Christchurch
 
+App created using create react app, its readme can be seen [here](README-create-react-app.md)
+
 Requirements
 ------------
 
