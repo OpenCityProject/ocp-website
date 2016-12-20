@@ -2,8 +2,15 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 //import logo from '../img/logo.svg'
 import './App.css'
+import FacebookLogin from 'react-facebook-login';
 
 class App extends Component {
+
+  responseFacebook(response) {
+    console.log(response);
+    // send userID or email to database for authorization level checking
+  }
+
   render() {
     return (
       <div className="App">
@@ -25,7 +32,12 @@ class App extends Component {
         <div>
           {this.props.children}
         </div>
-      </div>
+          <FacebookLogin
+            appId="1088597931155576"
+            autoLoad={true}
+            fields="name,email,picture"
+            callback={this.responseFacebook} />
+        </div>
     )
   }
 }
